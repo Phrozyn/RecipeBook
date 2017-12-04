@@ -4,7 +4,7 @@ Meteor.publish('recipes', function(){
     });
 });
 
-Meteor.publish('cardRecipe', function(){
+Meteor.publish('cardRecipe', function(id){
     check(id, String);
     return Recipes.find({_id: id});
     });
